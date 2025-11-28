@@ -1,0 +1,323 @@
+/* Thiết lập chung */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #ffffff; /* Nền trắng */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- 1. HEADER (Đen & Cam) --- */
+header {
+  background-color: #1e1e1e; /* Nền đen đậm */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Thêm gap từ bản chỉnh sửa của bạn */
+  font-size: 22px; /* Thêm font-size từ bản chỉnh sửa của bạn */
+  font-weight: bold;
+  /* KHẮC PHỤC: Thêm lại màu chữ trắng để hiển thị trên nền đen */
+  color: #ffffff;
+}
+
+.logo img {
+  width: 45px; /* Thêm width từ bản chỉnh sửa của bạn */
+  height: 45px; /* Thêm height từ bản chỉnh sửa của bạn */
+  border-radius: 50%;
+  background: white; /* Thêm background từ bản chỉnh sửa của bạn */
+  padding: 5px; /* Thêm padding từ bản chỉnh sửa của bạn */
+  object-fit: contain;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ff9800; /* Hover màu cam */
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+}
+
+#cart-count {
+  background-color: #ff9800; /* Số lượng màu cam */
+  color: #1e1e1e; /* Chữ đen trên nền cam */
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 13px;
+  font-weight: bold;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* --- 2. TÌM KIẾM VÀ ĐIỀU KHIỂN (Top Banner) --- */
+.top-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa nội dung chính */
+  padding: 40px 20px;
+  background: #ff9800;
+  color: white;
+  border-bottom: 5px solid #1e1e1e;
+}
+
+.search-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-box h2 {
+  font-size: 22px;
+  color: #1e1e1e;
+  font-weight: 700;
+  margin-right: 15px;
+  white-space: nowrap;
+}
+
+.search-box input {
+  flex-grow: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
+
+/* Nút Tìm */
+.search-box button {
+  padding: 12px 25px;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.search-box button:hover {
+  background-color: #ff9800;
+}
+
+.sort-controls {
+  display: flex;
+  gap: 15px;
+  /* KHU VỰC NÀY ĐÃ ĐƯỢC CĂN GIỮA nhờ align-items: center trên .top-banner */
+}
+
+/* Nút Sắp xếp */
+.sort-controls button {
+  padding: 10px 18px;
+  border: 2px solid #1e1e1e;
+  background-color: white;
+  color: #1e1e1e;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sort-controls button:hover {
+  background-color: #ff9800;
+  color: white;
+  border-color: #ff9800;
+}
+
+/* --- 3. SẢN PHẨM --- */
+.products {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #1e1e1e;
+  font-weight: 800;
+}
+
+.product-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.product {
+  background: white;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: 0.3s ease-out;
+  border: 1px solid #eee;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Quan trọng: Đảm bảo kích thước ảnh đồng đều */
+.product img {
+  width: 100%;
+  height: 200px; /* Chiều cao cố định */
+  object-fit: cover; /* Cắt ảnh để vừa vặn mà không bị méo */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 18px;
+  color: #1e1e1e;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.product p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e65100; /* Cam đậm cho giá */
+  margin: 10px 0;
+}
+
+/* Nút Thêm vào giỏ hàng (Link) */
+.add-to-cart-link {
+  display: inline-block;
+  margin-top: 10px;
+  background: #1e1e1e; /* Nền đen */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart-link:hover {
+  background-color: #ff9800; /* Hover cam */
+  color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.4);
+}
+
+/* --- 4. FOOTER --- */
+footer {
+  background: #1e1e1e;
+  color: #ccc;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+  font-size: 14px;
+  border-top: 3px solid #ff9800;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* --- MEDIA QUERIES cho thiết bị di động --- */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 15px;
+  }
+  nav {
+    display: none; /* Ẩn menu chính trên mobile để tiết kiệm không gian */
+  }
+  .top-banner {
+    padding: 20px 10px;
+  }
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 15px;
+    max-width: 95%;
+  }
+  .search-box h2 {
+    margin-right: 0;
+    text-align: center;
+  }
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+  .sort-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .products {
+    padding: 30px 10px;
+  }
+  .product {
+    width: 45%; /* Hai sản phẩm trên một hàng */
+  }
+  .product img {
+    height: 150px; /* Giảm chiều cao ảnh trên mobile */
+  }
+}
+@media (max-width: 480px) {
+  .product {
+    width: 90%; /* Một sản phẩm trên một hàng để dễ xem */
+  }
+}
