@@ -1,0 +1,147 @@
+/* ====================================
+   BASE STYLE CHO TRANG ĐĂNG NHẬP (Màu Cam - Trắng - Đen)
+   ==================================== */
+
+.login-page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Font hiện đại */
+  background-color: #f0f2f5; /* Nền xám nhạt */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px; /* Padding tổng thể */
+  box-sizing: border-box; /* Đảm bảo padding không làm tràn */
+}
+
+/* ====================================
+   LOGIN CONTAINER (Khung đăng nhập)
+   ==================================== */
+
+.login-container {
+  background-color: #ffffff; /* Nền trắng cho khung */
+  padding: 35px 45px;
+  border-radius: 12px; /* Góc bo tròn mềm mại hơn */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Bóng đổ nổi bật hơn */
+  width: 100%;
+  max-width: 400px; /* Chiều rộng tăng nhẹ */
+  text-align: center;
+  position: relative; /* Cho phép các hiệu ứng sau này nếu cần */
+  overflow: hidden; /* Đảm bảo bo tròn đẹp */
+}
+
+.login-container h2 {
+  margin-bottom: 30px;
+  color: #2c3e50; /* Màu chữ đen đậm */
+  font-size: 28px; /* Tăng kích thước chữ */
+  font-weight: 700; /* Đậm hơn */
+  position: relative;
+}
+
+/* Thanh trang trí dưới tiêu đề */
+.login-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #ff8c00; /* Màu cam chủ đạo */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ====================================
+   FORM VÀ INPUT
+   ==================================== */
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Tăng khoảng cách giữa các trường */
+}
+
+.login-container label {
+  text-align: left;
+  font-weight: 600; /* Đậm vừa */
+  color: #34495e; /* Màu chữ xám đen */
+  margin-bottom: -15px; /* Giảm khoảng cách để label gần input */
+  font-size: 15px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 14px 18px; /* Tăng padding */
+  border: 1px solid #e0e0e0; /* Border nhạt hơn */
+  border-radius: 8px; /* Bo tròn input */
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  background-color: #fdfdfd; /* Hơi trắng ngà */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-container input:focus {
+  border-color: #ff8c00; /* Cam khi focus */
+  box-shadow: 0 0 8px rgba(255, 140, 0, 0.2); /* Bóng cam nhẹ */
+  outline: none;
+}
+
+/* ====================================
+   BUTTON
+   ==================================== */
+
+.login-container button[type="submit"] {
+  background-color: #ff8c00; /* Màu cam chủ đạo */
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px; /* Bo tròn nút */
+  cursor: pointer;
+  font-size: 18px; /* Tăng kích thước chữ nút */
+  font-weight: 700;
+  margin-top: 25px; /* Khoảng cách từ input cuối */
+  transition: background-color 0.3s, transform 0.2s;
+  letter-spacing: 0.5px; /* Khoảng cách chữ */
+}
+
+.login-container button[type="submit"]:hover {
+  background-color: #e67e00; /* Cam đậm hơn khi hover */
+  transform: translateY(-2px); /* Nâng nhẹ nút lên */
+}
+
+.login-container button[type="submit"]:active {
+  transform: translateY(0); /* Trở lại vị trí cũ khi nhấn */
+}
+
+/* ====================================
+   FOOTER (Đăng ký/Quên mật khẩu)
+   ==================================== */
+
+.login-container p {
+  margin-top: 25px;
+  font-size: 15px;
+  color: #555;
+}
+
+.login-container p a {
+  color: #ff8c00; /* Cam cho link */
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.login-container p a:hover {
+  color: #e67e00; /* Cam đậm hơn khi hover */
+  text-decoration: underline;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 500px) {
+  .login-container {
+    padding: 25px 30px;
+    margin: 10px;
+  }
+  .login-container h2 {
+    font-size: 24px;
+  }
+}
