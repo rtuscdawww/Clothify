@@ -1,0 +1,143 @@
+/* ====================================
+   GENERAL PAGE STYLE
+==================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+}
+
+/* 👉 Canh giữa toàn bộ trang */
+body {
+  background: #ffffff;
+  color: #1e1e1e;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ====================================
+   PAGE TITLE
+==================================== */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+/* ====================================
+   FORM CONTAINER
+==================================== */
+form {
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #ff9800;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
+
+/* ====================================
+   SUBMIT BUTTON
+==================================== */
+button {
+  background: #ff9800;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+  width: 100%;
+}
+
+button:hover {
+  background: #e67c00;
+}
+
+/* ====================================
+   BACK LINK
+==================================== */
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1e1e1e;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: #ff9800;
+  color: white;
+  border-color: #ff9800;
+}
+
+/* ====================================
+   SUCCESS & ERROR MESSAGE
+==================================== */
+.success {
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.error {
+  color: #dc3545;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* ====================================
+   MOBILE OPTIMIZATION
+==================================== */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  form {
+    padding: 20px;
+  }
+}
